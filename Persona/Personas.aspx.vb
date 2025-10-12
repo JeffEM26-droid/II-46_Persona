@@ -31,13 +31,43 @@
 
     Protected Sub Gv_Personas_RowEditing(sender As Object, e As GridViewEditEventArgs)
 
+
+
     End Sub
 
     Protected Sub Gv_Personas_RowCancelingEdit(sender As Object, e As GridViewCancelEditEventArgs)
 
+        Gv_Personas.EditIndex = -1 ' Salir del modo de edición
+        Gv_Personas.DataBind()
+
+
     End Sub
 
     Protected Sub Gv_Personas_RowUpdating(sender As Object, e As GridViewUpdateEventArgs)
+
+        Dim id As Integer = Convert.ToInt32(Gv_Personas.DataKeys(e.RowIndex).Value)
+        Dim persona As Persona = New Persona With {
+            .Nombre = e.NewValues("Nombre"),
+            .Apellido = e.NewValues("Apellido"),
+            .Edad = e.NewValues("Edad"),
+            .id = id
+        }
+        dbHelper.update(persona)
+        Gv_Personas.DataBind()
+        e.Cancel = True
+        Gv_Personas.EditIndex = -1 ' Salir del modo de edición
+
+    End Sub
+
+    Protected Sub Gv_Personas_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+
+        Dim id As Integer = Convert.ToInt32(Gv_Personas.DataKeys(e.Equals(id)))
+        Dim persona As Persona = New Persona()
+
+        persona.Nombre = txt_nombre.ToString()
+
+
 
     End Sub
 End Class
