@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class Personas
 
     '''<summary>
+    '''Control editando.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents editando As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
     '''Control txt_nombre.
     '''</summary>
     '''<remarks>
@@ -41,13 +50,22 @@ Partial Public Class Personas
     Protected WithEvents txt_edad As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control btn_guardar.
+    '''Control btnMostrar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btn_guardar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnMostrar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control btnActualizar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnActualizar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control lbl_mensaje.

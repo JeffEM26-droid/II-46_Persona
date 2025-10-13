@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+    <asp:HiddenField ID="editando" runat="server" />
+
     <div class ="container d-flex-column mb-3 gap-2">
 
     <asp:TextBox ID="txt_nombre" placeholder ="Nombre" runat="server"></asp:TextBox>
@@ -10,7 +12,10 @@
 
     
 
-    <asp:Button ID="btn_guardar" CssClass ="btn btn-primary" runat="server" Text="Guardar" OnClick="btn_guardar_Click" />
+    <asp:Button ID="btnMostrar" CssClass ="btn btn-primary btn-hover-move" runat="server" Text="Guardar" OnClick="btn_guardar_Click" />
+    <asp:Button ID="btnActualizar" CssClass ="btn btn-primary btn-hover-move" runat="server" Text="Actualizar" OnClick="btn_actualizar_Click" />
+
+
 
     <asp:Label ID="lbl_mensaje" runat="server" Text=""></asp:Label>
 
